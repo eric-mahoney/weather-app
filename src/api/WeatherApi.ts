@@ -1,7 +1,7 @@
 import { API_KEY, BASE_URL } from "../config";
 
 export default {
-  getWeather() {
-    return fetch(`${BASE_URL}q=Richmond&appid=${API_KEY}`);
+  getByLocation(location: string): Promise<Response> {
+    return fetch(`${BASE_URL}q=${location}&appid=${API_KEY}`);
   },
 };

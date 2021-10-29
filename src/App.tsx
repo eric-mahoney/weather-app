@@ -1,8 +1,14 @@
-import React from "react";
+import { Suspense } from "react";
+import Weather from "./components/Weather";
 
 function App() {
-  console.log(getWeather());
-  return <div className="App"></div>;
+  return (
+    <div className="App">
+      <Suspense fallback={<p>loading</p>}>
+        <Weather />
+      </Suspense>
+    </div>
+  );
 }
 
 export default App;
